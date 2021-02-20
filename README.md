@@ -1,6 +1,7 @@
 # A test case for flutter drive not respecting pubspec.lock
 
-`my_app` has a locked/overridden unpublished package dependency from path.
+`my_app` has a locked/overridden unpublished package dependency from path
+similarly how [`melos`](https://github.com/invertase/melos) works.
 
 my_app/pubspec.lock:
 ```
