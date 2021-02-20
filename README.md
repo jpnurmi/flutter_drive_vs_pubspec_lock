@@ -1,9 +1,22 @@
 # A test case for flutter drive not respecting pubspec.lock
 
+`my_app` has a locked/overridden unpublished package dependency from path.
+
+my_app/pubspec.lock:
+```
+  my_package:
+    dependency: "direct main"
+    description:
+      path: "../my_package"
+      relative: true
+    source: path
+    version: "0.0.1"
+```
+
 ## Flutter drive doesn't work
 
-`flutter drive --no-pub` ignores an unpublished locked package dependency from
-path, and insists verifying that the package has been published.
+`flutter drive --no-pub` ignores `pubspec.lock`, and insists verifying that the
+package has been published.
 
 Steps to reproduce:
 
